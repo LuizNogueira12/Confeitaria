@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+:root{
+    --cor-1: #E66256;
+    --cor-2: #e48981;
+    --cor-3: #ffffff;
+
+    --font-negrita: 'Satisfy', cursive;
+    --font-principal:'Dosis', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-principal);
+}
+
+header{
+    background-color: var(--cor-2);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.nav-menu{
+    display: flex;    
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-link{
+    transition: 0.5s ease;
+    font-weight: bolder;
+}
+
+.nav-link:hover{
+    color: black;
+}
+
+.hamburguer{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width:768px){
+    .hamburguer{
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: var(--cor-2);
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+}
+ 
