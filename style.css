@@ -78,6 +78,13 @@ a{
     transition: all 0.3s ease-in-out;
 }
 
+.whats img{
+    border-radius: 100px;
+    width: 55px;
+    height: 55px;
+    
+}
+
 @media (max-width:768px){
     .hamburguer{
         display: block;
