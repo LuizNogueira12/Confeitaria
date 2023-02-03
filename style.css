@@ -77,12 +77,18 @@ a{
     background-color: white;
     transition: all 0.3s ease-in-out;
 }
+.whats{
+    text-align: right;
+    margin-right: 5px;
+    margin-top: 5px;
+    
+}
 
 .whats img{
     border-radius: 100px;
     width: 55px;
     height: 55px;
-    
+    box-shadow: 2px 2px 5px black;
 }
 
 @media (max-width:768px){
